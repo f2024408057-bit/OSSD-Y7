@@ -12,6 +12,10 @@ def calculate(operation):
         elif operation == "mul":
             result = num1 * num2
         elif operation == "div":
+            if num2 == 0:
+                result_label.config(text="Error: Cannot divide by 0")
+                return
+        
             result = num1 / num2
 
         result_label.config(text=f"Result: {result}")
